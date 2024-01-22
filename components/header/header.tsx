@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Menu from "./Menu";
 
 const Links = [
 	{ href: "/", label: "Cart" },
@@ -14,15 +15,7 @@ const header = () => {
 					<Link href={"/"} className="btn btn-ghost text-lg">
 						Student-Stitch
 					</Link>
-					<ul className="flex">
-						{Links.map(({ href, label }) => (
-							<li key={href}>
-								<Link href={href} className="btn btn-ghost rounded-btn">
-									{label}
-								</Link>
-							</li>
-						))}
-					</ul>
+					<Menu />
 				</div>
 			</nav>
 		</header>
